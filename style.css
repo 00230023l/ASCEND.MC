@@ -1,67 +1,129 @@
-/* Estilo base - parte 1 */
-
-body {
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo e fonte */
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
   color: #eee;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-#app {
-  max-width: 960px;
+/* Container para limitar largura e centralizar */
+.container {
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+  padding: 0 20px;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+/* Cabeçalho */
+.header {
+  background-color: #181818;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.75);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #bbb;
+/* Layout flex para header */
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 
-section#introducao {
-  margin-top: 2rem;
-  background-color: #1e1e1e;
-  padding: 15px 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-}
-
-section#introducao h2 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-section#introducao p {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
-.botao-exemplo button {
-  margin-top: 2rem;
-  padding: 10px 25px;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 7px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.botao-exemplo button:hover {
-  background-color: #45a049;
-}
-
-#mensagem {
-  margin-top: 1rem;
-  font-weight: bold;
+/* Logo */
+.logo a {
   color: #4caf50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+/* Navegação */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Links da navbar */
+.nav-link {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #4caf50;
+  outline: none;
+}
+
+/* Botão Loja */
+.btn-loja {
+  background-color: #4caf50;
+  color: #121212;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-loja:hover,
+.btn-loja:focus {
+  background-color: #43a047;
+  color: #fff;
+  outline: none;
+}
+
+/* Botão toggle para mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    height: calc(100vh - 60px);
+    width: 250px;
+    background-color: #181818;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 9998;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
