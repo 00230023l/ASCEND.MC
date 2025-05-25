@@ -1,12 +1,18 @@
-// Parte 1 - script básico com evento de botão
-
-console.log("Script carregado - parte 1");
-
+// Toggle menu mobile
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btnTeste");
-  const mensagem = document.getElementById("mensagem");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navList = document.querySelector(".nav-list");
 
-  btn.addEventListener("click", () => {
-    mensagem.textContent = "JS funcionando! Você clicou no botão.";
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+  });
+
+  // Fecha o menu ao clicar em algum link (mobile)
+  navList.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (navList.classList.contains("active")) {
+        navList.classList.remove("active");
+      }
+    });
   });
 });
