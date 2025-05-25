@@ -1,0 +1,67 @@
+/* Estilo base - parte 1 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  line-height: 1.6;
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+section#introducao {
+  margin-top: 2rem;
+  background-color: #1e1e1e;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+section#introducao h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+section#introducao p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.botao-exemplo button {
+  margin-top: 2rem;
+  padding: 10px 25px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.botao-exemplo button:hover {
+  background-color: #45a049;
+}
+
+#mensagem {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #4caf50;
+}
