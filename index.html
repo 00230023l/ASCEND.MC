@@ -5,29 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ascent MC - Servidor Minecraft</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pV0zWl2+WQ7j8Ug5XrQrX9BFl9UyQZtrcMHslDYK8eFQhy/hE1FKO4Vwr2fD/2p3TAcE7QhQPYf+lp5cqkE2Fg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-  <div id="app">
-    <header>
-      <h1>Bem-vindo ao Ascent MC</h1>
-      <p>Servidor Minecraft com diversão garantida!</p>
-    </header>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#" aria-label="Logo Ascent MC">Ascent MC</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#vip" class="nav-link">VIPs</a></li>
+          <li><a href="#modos" class="nav-link">Modos</a></li>
+          <li><a href="#discord" class="nav-link">Discord</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+          <li><a href="#loja" class="btn-loja">Loja <i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <section id="introducao">
-      <h2>Sobre o Ascent MC</h2>
-      <p>
-        O Ascent MC é um servidor dedicado a proporcionar a melhor experiência Minecraft, com modos variados e uma comunidade ativa.
-      </p>
-      <p>
-        Explore mundos, faça amigos e conquiste territórios conosco.
-      </p>
-    </section>
-
-    <section id="inicio" class="botao-exemplo">
-      <button id="btnTeste">Clique aqui para testar JS</button>
-      <p id="mensagem"></p>
-    </section>
-  </div>
+  <main id="inicio" class="container">
+    <h1>Bem-vindo ao Ascent MC</h1>
+    <p>Servidor Minecraft com diversão garantida e comunidade ativa.</p>
+  </main>
 
   <script src="script.js"></script>
 </body>
