@@ -24,3 +24,14 @@ function scrollToSection(id) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+// Função para copiar texto de um elemento <code>
+function copiarTexto(elementId) {
+  const texto = document.getElementById(elementId).innerText;
+
+  navigator.clipboard.writeText(texto).then(() => {
+    alert("IP copiado com sucesso!");
+  }).catch(() => {
+    alert("Erro ao copiar IP.");
+  });
+}
