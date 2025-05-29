@@ -272,3 +272,45 @@ body {
 .ip-box button:hover {
   background-color: #43a047;
 }
+
+/* Seção Discord */
+.discord-section {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.discord-section h2 {
+  font-size: 2.2rem;
+  color: #7289da;
+  margin-bottom: 10px;
+}
+
+.discord-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.discord-btn {
+  background-color: #7289da;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.discord-btn:hover {
+  background-color: #5b6eae;
+}
+
+.discord-icon {
+  width: 24px;
+  height: 24px;
+}
