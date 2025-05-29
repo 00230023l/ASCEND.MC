@@ -35,3 +35,10 @@ function copiarTexto(elementId) {
     alert("Erro ao copiar IP.");
   });
 }
+
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
