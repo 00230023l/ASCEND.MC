@@ -16,3 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Scroll suave até a seção desejada
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
