@@ -11,6 +11,8 @@ body {
   background-color: #121212;
   color: #eee;
   line-height: 1.5;
+  /* Consider adding 'overflow-x: hidden;' to prevent horizontal scroll issues on some mobile views, especially with fixed elements */
+  overflow-x: hidden;
 }
 
 /* Container para limitar largura e centralizar */
@@ -23,10 +25,11 @@ body {
 /* Cabeçalho */
 .header {
   background-color: #181818;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.75);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
   position: sticky;
   top: 0;
   z-index: 9999;
+  width: 100%; /* Ensure header takes full width */
 }
 
 /* Layout flex para header */
@@ -44,7 +47,10 @@ body {
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 2px;
+  /* user-select: none; is good for preventing text selection */
   user-select: none;
+  /* Consider adding 'white-space: nowrap;' to prevent logo from breaking into multiple lines on smaller screens if text is long */
+  white-space: nowrap;
 }
 
 /* Navegação */
@@ -83,6 +89,7 @@ body {
   gap: 8px;
   transition: background-color 0.3s ease;
   user-select: none;
+  text-decoration: none; /* Ensure it also removes underline for anchor tag */
 }
 
 .btn-loja:hover,
@@ -101,6 +108,8 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   user-select: none;
+  /* Ensure it has a z-index to be clickable above other content if necessary */
+  z-index: 10000;
 }
 
 /* Responsividade */
@@ -117,6 +126,11 @@ body {
     gap: 20px;
     transition: right 0.3s ease;
     z-index: 9998;
+    /* Add padding for better spacing on mobile */
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Add box-shadow for better visual separation */
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .nav-list.active {
@@ -140,6 +154,8 @@ body {
   text-align: center;
   position: relative;
   color: #fff;
+  /* Ensure the hero section doesn't overflow horizontally on smaller screens */
+  overflow: hidden;
 }
 
 .hero-overlay {
@@ -147,6 +163,9 @@ body {
   padding: 50px;
   border-radius: 16px;
   backdrop-filter: blur(5px);
+  /* Use max-width to ensure it doesn't get too wide on larger screens, causing text to spread out */
+  max-width: 800px;
+  margin: 0 20px; /* Add horizontal margin for smaller screens */
 }
 
 .hero-title {
@@ -172,6 +191,8 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none; /* Ensure it also removes underline for anchor tag if it's used as a link */
+  display: inline-block; /* Ensures padding and margin work correctly if it's a link */
 }
 
 .hero-btn:hover {
@@ -201,6 +222,10 @@ body {
   .hero-btn {
     font-size: 0.9rem;
   }
+  /* Adjust padding for smaller screens */
+  .hero-overlay {
+    padding: 30px;
+  }
 }
 
 /* Seção Conecte-se Já */
@@ -225,12 +250,19 @@ body {
 
 .ip-box {
   background-color: #222;
-  display: inline-block;
+  /* Use display: flex and flex-direction: column for better alignment, especially for bedrock */
+  display: inline-flex; /* Use inline-flex to allow boxes to sit side-by-side naturally */
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start */
   margin: 15px;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 255, 128, 0.1);
+  /* text-align: left; is still valid, but flex properties make it more robust */
   text-align: left;
+  /* Add max-width to prevent stretching on very wide screens and maintain card-like appearance */
+  max-width: 350px;
+  vertical-align: top; /* Align to the top when inline-flex */
 }
 
 .ip-box span {
@@ -248,6 +280,7 @@ body {
   font-size: 1rem;
   color: #fff;
   margin-bottom: 8px;
+  word-break: break-all; /* Ensure long IP addresses wrap if necessary */
 }
 
 .ip-box .port {
@@ -267,6 +300,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  align-self: flex-end; /* Push button to the right within the flex container */
 }
 
 .ip-box button:hover {
@@ -316,12 +350,18 @@ body {
   object-fit: contain;
 }
 
+/* VIP Section */
 .vips-section {
-  margin-left: 270px; /* se o menu lateral tiver 250px, ajuste conforme */
+  /* Removed margin-left: 270px; as it suggests a fixed sidebar which is not apparent in the HTML.
+     If you intend to have a fixed sidebar, this would be handled differently with flexbox or grid on the main content area.
+     For now, I'll assume it should be centered like other sections. */
   padding: 60px 20px;
   background: #111;
   min-height: 100vh;
   color: #fff;
+  /* Add max-width and margin auto to center the content within the section */
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
 }
 
 .section-title {
@@ -346,6 +386,9 @@ body {
   padding: 25px 20px;
   box-shadow: 0 0 12px rgba(0, 255, 213, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Use flexbox for card content alignment */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push button to the bottom */
 }
 
 .vip-card:hover {
@@ -367,14 +410,25 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: #ccc;
+  flex-grow: 1; /* Allow the list to grow and push the button down */
+  margin-bottom: 15px; /* Add margin below list for spacing with button */
 }
 
 .vip-card li {
   margin-bottom: 8px;
 }
 
+.vip-card strong {
+  color: #00ffd5; /* Highlight the price */
+}
+
+.vip-card em {
+  font-size: 0.85em; /* Make the small note slightly smaller */
+  color: #aaa;
+}
+
 .vip-btn {
-  margin-top: 15px;
+  margin-top: auto; /* Push the button to the bottom if using flexbox on .vip-card */
   width: 100%;
   background: #00ffd5;
   color: #000;
@@ -388,4 +442,11 @@ body {
 
 .vip-btn:hover {
   background: #00c7aa;
+}
+
+/* Optional: Add media queries for VIP cards to stack on very small screens if needed */
+@media (max-width: 650px) {
+  .vip-card {
+    width: 90%; /* Make cards take almost full width on very small screens */
+  }
 }
