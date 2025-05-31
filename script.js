@@ -62,3 +62,8 @@ document.querySelectorAll('.vip-btn').forEach(button => {
     alert('Você será redirecionado para a loja em breve!');
   });
 });
+
+function toggleMenu() {
+  const menu = document.getElementById('side-menu');
+  menu.classList.toggle('show');
+}
