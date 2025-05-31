@@ -56,3 +56,9 @@ document.querySelectorAll('.sidebar-nav a').forEach(link => {
     }
   });
 });
+
+document.querySelectorAll('.vip-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Você será redirecionado para a loja em breve!');
+  });
+});
