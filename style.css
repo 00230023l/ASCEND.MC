@@ -431,3 +431,51 @@ body {
 .vip-btn:hover {
   background: #00c7aa;
 }
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: #00ffd5;
+  border: none;
+  padding: 12px 18px;
+  font-size: 18px;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffd5;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background: #1a1a1a;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.side-menu a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.side-menu.show {
+  left: 0;
+}
