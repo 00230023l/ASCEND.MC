@@ -357,21 +357,77 @@ body {
 .sidebar-nav a:hover {
   color: #fff;
 }
-.vip-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px 0;
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.5;
+
+.vips-section {
+  margin-left: 270px; /* se o menu lateral tiver 250px, ajuste conforme */
+  padding: 60px 20px;
+  background: #111;
+  min-height: 100vh;
+  color: #fff;
 }
 
-.vip-card li {
-  margin-bottom: 6px;
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #00ffd5;
+}
+
+.vip-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.vip-card {
+  background: #1b1b1b;
+  border: 2px solid #00ffd5;
+  border-radius: 16px;
+  width: 300px;
+  padding: 25px 20px;
+  box-shadow: 0 0 12px rgba(0, 255, 213, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vip-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.6);
 }
 
 .vip-card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
   color: #ffd700;
+  text-align: center;
+}
+
+.vip-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.vip-card li {
+  margin-bottom: 8px;
+}
+
+.vip-btn {
+  margin-top: 15px;
+  width: 100%;
+  background: #00ffd5;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.vip-btn:hover {
+  background: #00c7aa;
 }
