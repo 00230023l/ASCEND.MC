@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ascent MC - Servidor Minecraft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Ascent MC - Servidor Minecraft</title>
   <link rel="stylesheet" href="style.css" />
   <link
     rel="stylesheet"
@@ -35,100 +34,93 @@
     </div>
   </header>
 
-  <main id="inicio" class="container">
-    <h1>Bem-vindo ao Ascent MC</h1>
-    <p>Servidor Minecraft com diversão garantida e comunidade ativa.</p>
+  <main> <section class="hero" id="inicio"> <div class="hero-overlay">
+        <h1 class="hero-title">Entre no mundo do Ascent MC</h1>
+        <p class="hero-subtitle">Servidor com modos únicos, loja própria e comunidade ativa!</p>
+        <button class="hero-btn" onclick="scrollToSection('conecte-se')">Jogar Agora</button>
+      </div>
+    </section>
+
+    <section class="conecte-se" id="conecte-se">
+      <h2>Conecte-se já</h2>
+      <p>Escolha sua versão e copie o IP para jogar!</p>
+
+      <div class="ip-box">
+        <span>JAVA:</span>
+        <code id="java-ip">plus-02.bed.ovh:10112</code>
+        <button onclick="copiarTexto('java-ip')">Copiar</button>
+      </div>
+
+      <div class="ip-box">
+        <span>BEDROCK:</span>
+        <code id="bedrock-ip">plus-02.bed.ovh</code>
+        <span class="port">Porta: 10112</span>
+        <button onclick="copiarTexto('bedrock-ip')">Copiar</button>
+      </div>
+    </section>
+
+    <section class="discord-section" id="discord">
+      <h2>Entre no nosso Discord</h2>
+      <p>Fique por dentro das novidades, eventos e suporte!</p>
+      
+      <a href="https://discord.gg/seuconvite" target="_blank" class="discord-btn">
+        <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/discord.svg" alt="Discord" class="discord-icon">
+        Entrar no Discord
+      </a>
+    </section>
+
+    <section class="vips-section" id="vips">
+      <h2 class="section-title">Planos VIP</h2>
+      <div class="vip-cards">
+        <div class="vip-card">
+          <h3>VIP GOD</h3>
+          <ul>
+            <li>Full Neth P4, Unbreaking 3, Mending</li>
+            <li>Set de ferramentas full + Mace OP</li>
+            <li>3 packs de cenoura dourada</li>
+            <li>2 elytras Unbreaking 3 + Mending</li>
+            <li>2 packs maça dourada / 2 CAP</li>
+            <li>Rajada de vento, foguetes, pérolas</li>
+            <li>1 pack crystal + 1 pack obs</li>
+            <li>6 Totens, 1 Spawner, Ovo de zumbi</li>
+            <li><strong>R$25 (1 mês) / R$100 (permanente)</strong></li>
+            <li><em>Sem reembolso após 2h</em></li>
+          </ul>
+          <button class="vip-btn">Adquirir</button>
+        </div>
+
+        <div class="vip-card">
+          <h3>VIP SPEED</h3>
+          <ul>
+            <li>Full Netherite Proteção 4 / Unbreaking 3</li>
+            <li>2 Elytras Mending + Unbreaking</li>
+            <li>32 Maçãs douradas, 1 Mace</li>
+            <li>32 TNT, 16 Pérolas, 2 packs fogos</li>
+            <li>Arco OP + Kit Ferramentas Neth</li>
+            <li>2 packs cenoura dourada, 6 Totens</li>
+            <li><strong>R$17,90 (1 mês) / R$90 (perm)</strong></li>
+            <li><em>Sem reembolso após 2h</em></li>
+          </ul>
+          <button class="vip-btn">Adquirir</button>
+        </div>
+
+        <div class="vip-card">
+          <h3>VIP OURO</h3>
+          <ul>
+            <li>Set P3 Inquebrável 2</li>
+            <li>Ferramentas: Unbreaking 3 / Sharp 5</li>
+            <li>4 Totens, 8 Maçãs encantadas</li>
+            <li>2 packs cenoura dourada, pack maça dourada</li>
+            <li>Escudo Inq. 3 + Remendo</li>
+            <li>1 Elytra, pack fogos, 32 rajadas</li>
+            <li><strong>R$10 (1 mês) / R$40 (perm)</strong></li>
+          </ul>
+          <button class="vip-btn">Adquirir</button>
+        </div>
+      </div>
+    </section>
   </main>
-
-<section class="hero">
-  <div class="hero-overlay">
-    <h1 class="hero-title">Entre no mundo do Ascent MC</h1>
-    <p class="hero-subtitle">Servidor com modos únicos, loja própria e comunidade ativa!</p>
-    <button class="hero-btn" onclick="scrollToSection('conecte-se')">Jogar Agora</button>
-  </div>
-</section>
-
-  <section class="conecte-se" id="conecte-se">
-  <h2>Conecte-se já</h2>
-  <p>Escolha sua versão e copie o IP para jogar!</p>
-
-  <div class="ip-box">
-    <span>JAVA:</span>
-    <code id="java-ip">plus-02.bed.ovh:10112</code>
-    <button onclick="copiarTexto('java-ip')">Copiar</button>
-  </div>
-
-  <div class="ip-box">
-    <span>BEDROCK:</span>
-    <code id="bedrock-ip">plus-02.bed.ovh</code>
-    <span class="port">Porta: 10112</span>
-    <button onclick="copiarTexto('bedrock-ip')">Copiar</button>
-  </div>
-</section>
-
-<section class="discord-section" id="discord">
-  <h2>Entre no nosso Discord</h2>
-  <p>Fique por dentro das novidades, eventos e suporte!</p>
-  
-  <a href="https://discord.gg/seuconvite" target="_blank" class="discord-btn">
-    <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/discord.svg" alt="Discord" class="discord-icon">
-    Entrar no Discord
-  </a>
-</section>
-
-  <section class="vips-section" id="vips">
-  <h2 class="section-title">Planos VIP</h2>
-  <div class="vip-cards">
-    <div class="vip-card">
-      <h3>VIP GOD</h3>
-      <ul>
-        <li>Full Neth P4, Unbreaking 3, Mending</li>
-        <li>Set de ferramentas full + Mace OP</li>
-        <li>3 packs de cenoura dourada</li>
-        <li>2 elytras Unbreaking 3 + Mending</li>
-        <li>2 packs maça dourada / 2 CAP</li>
-        <li>Rajada de vento, foguetes, pérolas</li>
-        <li>1 pack crystal + 1 pack obs</li>
-        <li>6 Totens, 1 Spawner, Ovo de zumbi</li>
-        <li><strong>R$25 (1 mês) / R$100 (permanente)</strong></li>
-        <li><em>Sem reembolso após 2h</em></li>
-      </ul>
-      <button class="vip-btn">Adquirir</button>
-    </div>
-
-    <div class="vip-card">
-      <h3>VIP SPEED</h3>
-      <ul>
-        <li>Full Netherite Proteção 4 / Unbreaking 3</li>
-        <li>2 Elytras Mending + Unbreaking</li>
-        <li>32 Maçãs douradas, 1 Mace</li>
-        <li>32 TNT, 16 Pérolas, 2 packs fogos</li>
-        <li>Arco OP + Kit Ferramentas Neth</li>
-        <li>2 packs cenoura dourada, 6 Totens</li>
-        <li><strong>R$17,90 (1 mês) / R$90 (perm)</strong></li>
-        <li><em>Sem reembolso após 2h</em></li>
-      </ul>
-      <button class="vip-btn">Adquirir</button>
-    </div>
-
-    <div class="vip-card">
-      <h3>VIP OURO</h3>
-      <ul>
-        <li>Set P3 Inquebrável 2</li>
-        <li>Ferramentas: Unbreaking 3 / Sharp 5</li>
-        <li>4 Totens, 8 Maçãs encantadas</li>
-        <li>2 packs cenoura dourada, pack maça dourada</li>
-        <li>Escudo Inq. 3 + Remendo</li>
-        <li>1 Elytra, pack fogos, 32 rajadas</li>
-        <li><strong>R$10 (1 mês) / R$40 (perm)</strong></li>
-      </ul>
-      <button class="vip-btn">Adquirir</button>
-    </div>
-  </div>
-</section>
-
   
   <script src="script.js"></script>
-  
 </body>
 </html>
