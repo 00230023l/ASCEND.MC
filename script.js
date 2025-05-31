@@ -63,7 +63,3 @@ document.querySelectorAll('.vip-btn').forEach(button => {
   });
 });
 
-function toggleMenu() {
-  const menu = document.getElementById('side-menu');
-  menu.classList.toggle('show');
-}
