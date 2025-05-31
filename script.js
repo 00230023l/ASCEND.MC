@@ -43,20 +43,6 @@ function scrollToSection(id) {
   }
 }
 
-document.querySelectorAll('.sidebar-nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const id = link.getAttribute('href').substring(1);
-    const target = document.getElementById(id);
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 60,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-
 document.querySelectorAll('.vip-btn').forEach(button => {
   button.addEventListener('click', () => {
     alert('Você será redirecionado para a loja em breve!');
